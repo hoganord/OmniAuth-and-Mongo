@@ -22,3 +22,6 @@ doc/
 .DS_Store
 *.esproj
 .esproj
+
+# Ignore OmniAuth Twitter API Keys
+config/initializers/omniauth.rb

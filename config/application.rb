@@ -8,6 +8,7 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
   Bundler.require(*Rails.groups(:assets => %w(development test)))
@@ -17,6 +18,11 @@ end
 
 module OnmiauthMongodb
   class Application < Rails::Application
+  
+  config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+    end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -62,4 +68,4 @@ module OnmiauthMongodb
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
-end
+  end
