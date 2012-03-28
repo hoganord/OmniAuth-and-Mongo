@@ -17,3 +17,7 @@ gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.4.3"
 gem "omniauth", ">= 1.0.2"
 gem "omniauth-twitter"
+
+group :production do
+  gem 'thin'
+end
